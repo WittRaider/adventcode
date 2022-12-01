@@ -1,4 +1,9 @@
-import { getLines, debug, exit } from './lib/lib.js'
+import { getLines, debug, exit } from '../lib/lib.js'
+
+function findHighest(arr) {
+    let max = arr.reduce((a, b) => { return Math.max(a, b) });
+    return arr.indexOf(max);
+}
 
 function getElves() {
     let elves = [];
@@ -17,6 +22,4 @@ function getElves() {
     return elves;
 }
 
-let elves = getElves();
-elves.sort(function(a, b){return b-a}); //sort descending
-debug(elves[0]+elves[1]+elves[2]);
+debug(findHighest(getElves()));
