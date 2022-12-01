@@ -1,28 +1,22 @@
-const fs = require('fs');
-const lines = fs.readFileSync('./assets/2022-12-01.txt','utf-8').split("\n");
+import { getLines, debug, exit } from './lib/lib.js'
 
-function echo(data,doExit) {
-    console.log(data);
-    console.log("\n");
-    if(doExit) process.exit();
+function getElves() {
+    let elves = [];
+    let sum = 0;
+
+    getLines('./assets/2022-12-01.txt').forEach(line => {
+        line = line.trim(); 
+        if(line) {
+            let int = parseInt(line);
+            sum += int;
+        } else {
+            elves.push(sum);
+            sum = 0;
+        } 
+    });
+    return elves;
 }
 
-let index = 0;
-let elves = [];
-let sum = 0;
-
-for(let i = 0;i<lines.length;i++) {
-    let line = String(lines[i]).trim();
-    if(line) {
-        let int = parseInt(line);
-        sum += int;
-    } else {
-        elves.push(sum);
-        index++;
-        sum = 0;
-    }
-}
-
-elves.sort(function(a, b){return b-a});
-
-echo (elves[0]+elves[1]+elves[2]);
+let elves = getElves();
+elves.sort(function(a, b){return b-a}); //sort descending
+debug(elves[0]+elves[1]+elves[2]);

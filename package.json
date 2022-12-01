@@ -1,0 +1,23 @@
+{
+  "name": "adventcode",
+  "version": "1.0.0",
+  "description": "Advent code challenge",
+  "main": "2022-12-01.a.js",
+  "type":"module",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WittRaider/adventcode.git"
+  },
+  "author": "Dominik Wittenbeck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WittRaider/adventcode/issues"
+  },
+  "homepage": "https://github.com/WittRaider/adventcode#readme"
+}
