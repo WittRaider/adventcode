@@ -18,9 +18,9 @@ for(let i=0;i<line.length;i++) {
     let current = line[i];
     if(buffer.length > 13) {
  
-        let lastFourOfBuffer = buffer.substring(buffer.length-14,buffer.length);
-        if(areAllCharsUnique(lastFourOfBuffer)) {
-            debug([lastFourOfBuffer,i,buffer]);
+        let lastFourteenOfBuffer = buffer.substring(buffer.length-14,buffer.length);
+        if(areAllCharsUnique(lastFourteenOfBuffer)) {
+            debug([lastFourteenOfBuffer,i,buffer]);
             debug(i)
             exit();
         }
