@@ -9,7 +9,7 @@ function getElves() {
     let elves = [];
     let sum = 0;
 
-    getLines('./assets/2022-12-01.txt').forEach(line => {
+    getLines('./assets/2022.12.01.txt').forEach(line => {
         line = line.trim(); 
         if(line) {
             let int = parseInt(line);
