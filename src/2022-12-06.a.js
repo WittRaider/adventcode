@@ -15,16 +15,13 @@ let line = lines[0];
 
 let buffer = '';
 for(let i=0;i<line.length;i++) {
-    let current = line[i];
-    if(buffer.length > 3) {
- 
+    if(buffer.length > 3) { 
         let lastFourOfBuffer = buffer.substring(buffer.length-4,buffer.length);
         if(areAllCharsUnique(lastFourOfBuffer)) {
             debug([lastFourOfBuffer,i,buffer]);
             debug(i);
             exit();
         }
-   
     }
     buffer += line[i];
 }
